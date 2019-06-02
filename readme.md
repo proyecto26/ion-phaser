@@ -3,9 +3,16 @@
 # IonPhaser
 Web Component built with Stencil.js to integrate Phaser with any other framework.
 <p align="center">
-  <img width="300" alt="IonPhaser" src="./img/ionphaser.jpg">
+  <img width="600px" alt="IonPhaser" src="./img/ionphaser.jpg">
 </p>
 <p align="center">Inspired by the old <a href="https://github.com/jdnichollsc/IonPhaser">IonPhaser directive</a></p>
+
+### Packages
+
+| Project | Package | Version | Links |
+| ------- | ------- | ------- |:-----:|
+| **Core** | [`@ion-phaser/core`]() | [![version](https://img.shields.io/npm/v/@ion-phaser/core/latest.svg)](https://www.npmjs.com/package/@ion-phaser/core) | [`README.md`](./README.md)
+| **React** | [`@ion-phaser/react`](https://www.npmjs.com/package/@ion-phaser/react) | [![version](https://img.shields.io/npm/v/@ion-phaser/react/latest.svg)](https://www.npmjs.com/package/@ion-phaser/react) | [`README.md`](react/README.md)
 
 ## Getting Started
 
