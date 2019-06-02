@@ -15,13 +15,13 @@
 
 ## Methods
 
-### `destroy() => void`
+### `destroy() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 

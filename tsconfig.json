@@ -18,6 +18,7 @@
     "jsxFactory": "h",
     "skipLibCheck": true
   },
+  "files": ["node_modules/phaser/types/phaser.d.ts"],
   "include": [
     "src",
     "types/jsx.d.ts"

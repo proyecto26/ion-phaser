@@ -5,35 +5,21 @@
  */
 
 
-import '@stencil/core';
-
-
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   GameInstance,
 } from './components/models';
 
 
 export namespace Components {
-
   interface IonPhaser {
-    'destroy': () => void;
+    'destroy': () => Promise<void>;
     'game': GameInstance;
     'initialize': boolean;
-  }
-  interface IonPhaserAttributes extends StencilHTMLAttributes {
-    'game'?: GameInstance;
-    'initialize'?: boolean;
   }
 }
 
 declare global {
-  interface StencilElementInterfaces {
-    'IonPhaser': Components.IonPhaser;
-  }
-
-  interface StencilIntrinsicElements {
-    'ion-phaser': Components.IonPhaserAttributes;
-  }
 
 
   interface HTMLIonPhaserElement extends Components.IonPhaser, HTMLStencilElement {}
@@ -41,22 +27,29 @@ declare global {
     prototype: HTMLIonPhaserElement;
     new (): HTMLIonPhaserElement;
   };
-
   interface HTMLElementTagNameMap {
-    'ion-phaser': HTMLIonPhaserElement
-  }
-
-  interface ElementTagNameMap {
     'ion-phaser': HTMLIonPhaserElement;
   }
-
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+
+declare namespace LocalJSX {
+  interface IonPhaser extends JSXBase.HTMLAttributes<HTMLIonPhaserElement> {
+    'game'?: GameInstance;
+    'initialize'?: boolean;
+  }
+
+  interface IntrinsicElements {
+    'ion-phaser': IonPhaser;
+  }
+}
+
+export { LocalJSX as JSX };
+
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
+

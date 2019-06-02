@@ -1,7 +1,7 @@
-import { Game, Types } from 'phaser'
+import Phaser from 'phaser'
 
 type ObjectAlias = Object;
 
-export interface GameInstance extends Types.Core.GameConfig, ObjectAlias {
-  instance: Game
+export interface GameInstance extends Phaser.Types.Core.GameConfig, ObjectAlias {
+  instance: Phaser.Game
 }
