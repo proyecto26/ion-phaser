@@ -1,6 +1,6 @@
 {
   "name": "@ion-phaser/core",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A web component to integrate Phaser Framework with Angular, React, Vue, etc",
   "keywords": [
     "ionic",
@@ -35,5 +35,10 @@
   "devDependencies": {
     "@stencil/core": "~1.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": 
+"https://github.com/proyecto26/ion-phaser.git"
+  }
 }
