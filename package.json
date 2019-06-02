@@ -4,6 +4,7 @@
   "description": "A web component to integrate Phaser Framework with Angular, React, Vue, etc",
   "keywords": [
     "ionic",
+    "phaser",
     "framework",
     "angular",
     "react",
@@ -11,8 +12,7 @@
     "webcomponent",
     "app",
     "web component",
-    "web components",
-    "phaser"
+    "web components"
   ],
   "module": "dist/esm/index.js",
   "main": "dist/index.js",

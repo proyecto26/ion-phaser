@@ -4,18 +4,18 @@
   "description": "React specific wrapper for ion-phaser",
   "keywords": [
     "ionic",
+    "phaser",
     "framework",
     "react",
     "webcomponent",
     "app",
     "web component",
-    "web components",
-    "phaser"
+    "web components"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/proyecto26/ion-phaser.git"
   },
   "scripts": {
     "build": "npm run clean && npm run compile",
@@ -32,7 +32,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@ion-phaser/core": "file:.."
+    "@ion-phaser/core": "^1.0.0"
   },
   "devDependencies": {
     "@types/jest": "23.3.9",
