@@ -17,7 +17,6 @@
 
 <script>
 import Phaser from 'phaser'
-
 export default {
   name: 'HelloWorld',
   data() {
