@@ -13,8 +13,17 @@ import {
 
 export namespace Components {
   interface IonPhaser {
+    /**
+    * Destroy the Phaser game instance
+    */
     'destroy': () => Promise<void>;
+    /**
+    * The configuration of the game
+    */
     'game': GameInstance;
+    /**
+    * To initialize the plugin manually
+    */
     'initialize': boolean;
   }
 }
@@ -34,7 +43,13 @@ declare global {
 
 declare namespace LocalJSX {
   interface IonPhaser extends JSXBase.HTMLAttributes<HTMLIonPhaserElement> {
+    /**
+    * The configuration of the game
+    */
     'game'?: GameInstance;
+    /**
+    * To initialize the plugin manually
+    */
     'initialize'?: boolean;
   }
 

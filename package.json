@@ -1,6 +1,6 @@
 {
   "name": "@ion-phaser/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A web component to integrate Phaser Framework with Angular, React, Vue, etc",
   "keywords": [
     "ionic",
@@ -14,14 +14,17 @@
     "web component",
     "web components"
   ],
-  "module": "dist/esm/index.js",
   "main": "dist/index.js",
-  "unpkg": "dist/ionic.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/ionphaser/ionphaser.js",
   "files": [
     "dist/",
-    "react/dist/"
+    "loader/"
   ],
   "scripts": {
     "build": "stencil build --docs",
@@ -33,7 +36,12 @@
     "phaser": "^3.17.0"
   },
   "devDependencies": {
-    "@stencil/core": "~1.0.0"
+    "@stencil/core": "~1.0.0",
+    "@types/jest": "23.3.14",
+    "@types/puppeteer": "1.12.4",
+    "jest": "23.6.0",
+    "jest-cli": "23.6.0",
+    "puppeteer": "1.14.0"
   },
   "license": "MIT",
   "repository": {

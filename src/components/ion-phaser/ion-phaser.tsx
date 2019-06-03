@@ -8,8 +8,7 @@ import { GameInstance } from '../models'
 })
 export class IonPhaser {
   /**
-   * @property {GameConfig} game - The configuration of the game.
-   * @protected
+   * The configuration of the game
    */
   @Prop({
     mutable: true,
@@ -17,8 +16,7 @@ export class IonPhaser {
   }) game: GameInstance
 
   /**
-   * @property {Boolean} initialize - To initialize the plugin manually.
-   * @protected
+   * To initialize the plugin manually
    */
   @Prop() initialize: boolean = true
 
@@ -29,6 +27,9 @@ export class IonPhaser {
     }
   }
 
+  /**
+   * Destroy the Phaser game instance
+   */
   @Method()
   async destroy() {
     if (this.getInstance()) {
@@ -41,7 +42,7 @@ export class IonPhaser {
 
   initializeGame = () => {
     if(!this.game){
-      throw new Error("A game instance is required")
+      throw new Error("The configuration of the game is required")
     }
 
     this.game.parent = this.game.parent || this.el
@@ -58,6 +59,9 @@ export class IonPhaser {
     this.destroy()
   }
 
+  /**
+   * Get the game instance
+   */
   getInstance() {
     return this.game && this.game.instance
   }

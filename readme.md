@@ -18,17 +18,17 @@ Web Component built with Stencil.js to integrate Phaser with any other framework
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/ion-phaser@0.0.1/dist/ion-phaser.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser/core@0.1.0/dist/ionphaser.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
-- Run `npm install ion-phaser --save`
-- Put a script tag similar to this `<script src='node_modules/ion-phaser/dist/ion-phaser.js'></script>` in the head of your index.html
+- Run `npm install @ion-phaser/core --save`
+- Put a script tag similar to this `<script src='node_modules/@ion-phaser/core/dist/ionphaser.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### In a stencil-starter app
-- Run `npm install ion-phaser --save`
-- Add an import to the npm packages `import ion-phaser;`
+- Run `npm install @ion-phaser/core --save`
+- Add an import to the npm packages `import @ion-phaser/core;`
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ## Usage
@@ -71,13 +71,13 @@ The `CUSTOM_ELEMENTS_SCHEMA` needs to be included in any module that uses IonPha
 
 ```html
 <ion-phaser
-  [game]="gameConfig"
+  [game]="game"
   [initialize]="false"
 ></ion-phaser>
 ```
 
 ```ts
-public gameConfig = {
+public game = {
   width?: integer | string;
   height?: integer | string;
   zoom?: number;
@@ -127,11 +127,16 @@ getInstance(){
 
 ## React
 
+### Specific Wrapper
+When using a wrapper component, It's not necessary to access the reference directly to initialize the game. More details [here](./react)
+
+### Web Component
+Other option is using the web component directly: 
+
 ```tsx
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import { defineCustomElements as defineIonPhaser } from 'ion-phaser/dist/loader'
+import { defineCustomElements as defineIonPhaser } from '@ion-phaser/core/dist/loader'
 import Phaser from 'phaser'
 
 const game = {
