@@ -93,7 +93,7 @@ defineIonPhaser(window);
 ```html
 <ion-phaser
   [game]="game"
-  [initialize]="false"
+  [initialize]="initialize"
 ></ion-phaser>
 ```
 
@@ -126,8 +126,11 @@ public game = {
   images?: ImagesConfig;
   physics?: object;
   plugins?: PluginObject | PluginObjectItem[];
-  scale?: ScaleConfig;
+  scale?: ScaleConfig;,
+  initialize: Game // It's created internally when the game is initialized
 };
+
+public initialize: boolean;
 
 constructor(private api : ApiService){}
 
@@ -136,7 +139,9 @@ initializeGame() {
     width: "100%",
     height: "100%",
     type: Phaser.AUTO,
+    scene: {}
   }
+  this.initialize = true
 }
 
 getInstance(){
@@ -149,13 +154,22 @@ getInstance(){
 ## React
 
 ### Specific Wrapper
-When using a wrapper component, It's not necessary to access the reference directly to initialize the game. More details [here](./react).
+When using a wrapper component, It's not necessary to access the reference directly to initialize the game. More details [here](./react/README.md).
 ```tsx
 import React, { Component } from 'react'
 import Phaser from 'phaser'
 import { IonPhaser } from '@ion-phaser/react'
 
 class App extends Component {
+  state = {
+    initialize: false,
+    game: {
+      width: "100%",
+      height: "100%",
+      type: Phaser.AUTO,
+      scene: {}
+    }
+  }
   render() {
     const { initialize, game } = this.state
     return (
@@ -177,7 +191,8 @@ import Phaser from 'phaser'
 const game = {
   width: "100%",
   height: "100%",
-  type: Phaser.AUTO
+  type: Phaser.AUTO,
+  scene: {}
 }
 
 ReactDOM.render(<ion-phaser ref={el => el.game = game} />, document.getElementById('root'));
@@ -206,6 +221,35 @@ defineIonPhaser(window);
 new Vue({
   render: h => h(App)
 }).$mount('#app');
+```
+
+### Using IonPhaser in a Vue component
+
+```vue
+<template>
+  <ion-phaser 
+    v-bind:game.prop="game"
+    v-bind:initialize.prop="initialize"
+  />
+</template>
+
+<script>
+import Phaser from 'phaser'
+export default {
+  name: 'HelloWorld',
+  data() {
+    return {
+      initialize: false,
+      game: {
+        width: "100%",
+        height: "100%",
+        type: Phaser.AUTO,
+        scene: {}
+      }
+    }
+  }
+}
+</script>
 ```
 
 [_from stencil documentation_](https://github.com/ionic-team/stencil-site/blob/master/src/docs/framework-integration/vue.md)
