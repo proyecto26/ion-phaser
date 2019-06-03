@@ -2,8 +2,8 @@
 React specific wrapper for [ion-phaser](https://github.com/proyecto26/ion-phaser) component.
 
 # Why?
-`Most people who use React don’t use Web Components` and there're some limitations handling data with [Custom Components](https://custom-elements-everywhere.com/) from React.
-Thus, this `React component` was created not to need to reference their **Custom Elements** using a **ref** and manually attach the **game**, this makes working with [IonPhaser](https://github.com/proyecto26/ion-phaser) not cumbersome 👍🏻
+*Most people who use React don’t use [Web Components](https://reactjs.org/docs/web-components.html)* and there're some limitations handling data with [Custom Components](https://custom-elements-everywhere.com/) from React.
+Thus, this **React component** was created not to need to reference their **Custom Elements** using a **ref** and manually attach the **game**, this makes working with [IonPhaser](https://github.com/proyecto26/ion-phaser) not cumbersome 👍🏻
 
 # Usage
 
