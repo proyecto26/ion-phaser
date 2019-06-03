@@ -1,7 +1,7 @@
 <template>
   <div class="App">
   <header class="App-header">
-    <template v-if="!init">
+    <template v-if="!initialize">
       <img src="../assets/logo.png" class="App-logo" alt="logo" />
       <div @click="initializeGame" class="flex">
         <a href="#1" class="bttn">Initialize</a>
@@ -9,8 +9,8 @@
     </template>
     <ion-phaser 
       v-bind:game.prop="game"
-      v-bind:initialize.prop="init"
-    ></ion-phaser>
+      v-bind:initialize.prop="initialize"
+    />
   </header>
 </div>
 </template>
@@ -22,7 +22,7 @@ export default {
   name: 'HelloWorld',
   data() {
     return {
-      init: false,
+      initialize: false,
       game: {
         width: "100%",
         height: "100%",
@@ -51,7 +51,11 @@ export default {
   },
   methods: {
     initializeGame: function() {
-      this.init = true
+      this.initialize = true
+      setTimeout(() => {
+        // eslint-disable-next-line
+        console.log(this.game.instance)
+      }, 3000)
     }
   },
 }
