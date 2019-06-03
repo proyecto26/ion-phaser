@@ -39,7 +39,7 @@ class App extends Component {
     }
   }
 
-  initialize = () => {
+  initializeGame = () => {
     const { game } = this.state
     // this.ionPhaser.game = game
     this.setState({ initialize: true })
@@ -57,7 +57,7 @@ class App extends Component {
           { !initialize &&
             <React.Fragment>
               <img src={logo} className="App-logo" alt="logo" />
-              <div onClick={this.initialize} className="flex">
+              <div onClick={this.initializeGame} className="flex">
                 <a href="#1" className="bttn">Initialize</a>
               </div>
             </React.Fragment>

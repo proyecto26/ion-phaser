@@ -1,0 +1,11 @@
+<div class="App">
+  <header class="App-header">
+    <ng-container *ngIf="!initialize">
+      <img src="../assets/logo.png" class="App-logo" alt="logo" />
+      <div (click)="initializeGame()" class="flex">
+        <a href="#1" class="bttn">Initialize</a>
+      </div>
+    </ng-container>
+    <ion-phaser [game]="game" [initialize]="initialize"></ion-phaser>
+  </header>
+</div>

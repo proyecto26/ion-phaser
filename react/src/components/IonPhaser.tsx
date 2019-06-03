@@ -1,5 +1,5 @@
 import React from 'react';
-import { Game } from 'phaser';
+import Phaser from 'phaser';
 
 declare module "react" {
   namespace JSX {
@@ -10,7 +10,7 @@ declare module "react" {
 }
 
 interface Props {
-  game?: Game;
+  game?: Phaser.Game;
 }
 
 class IonPhaser extends React.Component<Props> {
