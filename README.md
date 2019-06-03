@@ -150,6 +150,20 @@ getInstance(){
 
 ### Specific Wrapper
 When using a wrapper component, It's not necessary to access the reference directly to initialize the game. More details [here](./react).
+```tsx
+import React, { Component } from 'react'
+import Phaser from 'phaser'
+import { IonPhaser } from '@ion-phaser/react'
+
+class App extends Component {
+  render() {
+    const { initialize, game } = this.state
+    return (
+      <IonPhaser game={game} initialize={initialize} />
+    )
+  }
+}
+```
 
 ### Web Component
 Other option is using the web component directly: 
