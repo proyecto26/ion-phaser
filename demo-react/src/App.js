@@ -4,8 +4,8 @@
 
 import React, { Component } from 'react'
 import Phaser from 'phaser'
-import logo from './assets/logo.png'
 import { IonPhaser } from '@ion-phaser/react'
+import logo from './assets/logo.png'
 
 import './App.css'
 

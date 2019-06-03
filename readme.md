@@ -33,7 +33,7 @@ Web Component built with Stencil.js to integrate Phaser with any other framework
 
 ## Usage
 Simply add this tag wherever you want in your project:
-```
+```html
 <ion-phaser [game]="game"></ion-phaser>
 ```
 
