@@ -11,7 +11,7 @@ Web Component built with Stencil.js to integrate Phaser with any other framework
 
 | Project | Package | Version | Links |
 | ------- | ------- | ------- |:-----:|
-| **Core** | [`@ion-phaser/core`]() | [![version](https://img.shields.io/npm/v/@ion-phaser/core/latest.svg)](https://www.npmjs.com/package/@ion-phaser/core) | [`README.md`](./README.md)
+| **Core** | [`@ion-phaser/core`](https://www.npmjs.com/package/@ion-phaser/core) | [![version](https://img.shields.io/npm/v/@ion-phaser/core/latest.svg)](https://www.npmjs.com/package/@ion-phaser/core) | [`README.md`](./README.md)
 | **React** | [`@ion-phaser/react`](https://www.npmjs.com/package/@ion-phaser/react) | [![version](https://img.shields.io/npm/v/@ion-phaser/react/latest.svg)](https://www.npmjs.com/package/@ion-phaser/react) | [`README.md`](react/README.md)
 
 ## Getting Started
@@ -128,7 +128,7 @@ getInstance(){
 ## React
 
 ### Specific Wrapper
-When using a wrapper component, It's not necessary to access the reference directly to initialize the game. More details [here](./react)
+When using a wrapper component, It's not necessary to access the reference directly to initialize the game. More details [here](./react).
 
 ### Web Component
 Other option is using the web component directly: 

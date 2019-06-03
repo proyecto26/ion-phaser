@@ -1,11 +1,13 @@
-# Introduction
+# IonPhaser for React
+
+## Introduction
 React specific wrapper for [ion-phaser](https://github.com/proyecto26/ion-phaser) component.
 
-# Why?
+## Why?
 *Most people who use React don’t use [Web Components](https://reactjs.org/docs/web-components.html)* and there're some limitations handling data with [Custom Components](https://custom-elements-everywhere.com/) from React.
 Thus, this **React component** was created not to need to reference their **Custom Elements** using a **ref** and manually attach the **game**, this makes working with [IonPhaser](https://github.com/proyecto26/ion-phaser) not cumbersome 👍🏻
 
-# Usage
+## Usage
 
 ```tsx
 import React, { Component } from 'react'
@@ -52,3 +54,13 @@ class App extends Component {
 
 export default App;
 ```
+
+
+## Supporting 🍻
+I believe in Unicorns 🦄
+Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
+
+## Happy coding 💯
+Made with ❤️
+
+<img width="150px" src="https://avatars0.githubusercontent.com/u/28855608?s=200&v=4" align="right">
