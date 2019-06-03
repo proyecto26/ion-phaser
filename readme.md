@@ -136,7 +136,7 @@ Other option is using the web component directly:
 ```tsx
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { defineCustomElements as defineIonPhaser } from '@ion-phaser/core/dist/loader'
+import { defineCustomElements as defineIonPhaser } from '@ion-phaser/core/loader'
 import Phaser from 'phaser'
 
 const game = {
