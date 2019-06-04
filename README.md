@@ -127,7 +127,7 @@ public game = {
   physics?: object;
   plugins?: PluginObject | PluginObjectItem[];
   scale?: ScaleConfig;,
-  initialize: Game // It's created internally when the game is initialized
+  instance: Game // It's created internally when the game is initialized
 };
 
 public initialize: boolean;
