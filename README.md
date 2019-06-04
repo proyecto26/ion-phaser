@@ -154,7 +154,7 @@ getInstance(){
 ## React
 
 ### Specific Wrapper
-When using a wrapper component, It's not necessary to access the reference directly to initialize the game. More details [here](./react/README.md).
+When using a wrapper component, It's not necessary to access the reference directly to configure the game. More details [here](./react/README.md).
 ```tsx
 import React, { Component } from 'react'
 import Phaser from 'phaser'
