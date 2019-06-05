@@ -1,6 +1,6 @@
 {
   "name": "@ion-phaser/core",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A web component to integrate Phaser Framework with Angular, React, Vue, etc",
   "keywords": [
     "ionic",

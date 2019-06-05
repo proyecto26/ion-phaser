@@ -1,6 +1,6 @@
 {
   "name": "@ion-phaser/react",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "React specific wrapper for ion-phaser",
   "keywords": [
     "ionic",
@@ -30,7 +30,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@ion-phaser/core": "~1.0.0"
+    "@ion-phaser/core": "1.1.0"
   },
   "devDependencies": {
     "@types/react": "16.7.6",

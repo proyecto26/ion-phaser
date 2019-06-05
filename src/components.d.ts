@@ -22,6 +22,10 @@ export namespace Components {
     */
     'game': GameInstance;
     /**
+    * Get the Phaser game instance
+    */
+    'getInstance': () => Promise<Phaser.Game>;
+    /**
     * To initialize the plugin manually
     */
     'initialize': boolean;

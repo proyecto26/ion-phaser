@@ -22,9 +22,17 @@ export class IonPhaser {
 
   @Watch('initialize')
   onInitialize(initialize: boolean) {
-    if (initialize && !this.getInstance()) {
+    if (initialize && !this.getGameInstance()) {
       this.initializeGame()
     }
+  }
+
+  /**
+   * Get the Phaser game instance
+   */
+  @Method()
+  async getInstance() {
+    return this.getGameInstance()
   }
 
   /**
@@ -32,7 +40,7 @@ export class IonPhaser {
    */
   @Method()
   async destroy() {
-    if (this.getInstance()) {
+    if (this.getGameInstance()) {
       this.game.instance.destroy(true)
       this.game.instance = null
     }
@@ -44,13 +52,16 @@ export class IonPhaser {
     if(!this.game){
       throw new Error("The configuration of the game is required")
     }
+    if(this.game.instance){
+      throw new Error("A Phaser game already exist")
+    }
 
     this.game.parent = this.game.parent || this.el
     this.game.instance = new Phaser.Game(this.game)
   }
 
   componentWillLoad() {
-    if (!this.getInstance() && this.initialize) {
+    if (!this.getGameInstance() && this.initialize) {
       this.initializeGame()
     }
   }
@@ -59,10 +70,7 @@ export class IonPhaser {
     this.destroy()
   }
 
-  /**
-   * Get the game instance
-   */
-  getInstance() {
+  getGameInstance() {
     return this.game && this.game.instance
   }
 }
