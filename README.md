@@ -7,6 +7,12 @@ Web Component built with **[Stencil.js](https://github.com/ionic-team/stencil)**
 </p>
 <p align="center">Inspired by the old <a href="https://github.com/jdnichollsc/IonPhaser">IonPhaser directive</a></p>
 
+## Demo
+
+Do you want to see this web component in action? Visit https://codepen.io/jdnichollsc/full/oRrwKM yay! 🎉
+
+## Getting Started
+
 ### Packages
 
 | Project | Package | Version | Links |
@@ -14,11 +20,9 @@ Web Component built with **[Stencil.js](https://github.com/ionic-team/stencil)**
 | **Core** | [`@ion-phaser/core`](https://www.npmjs.com/package/@ion-phaser/core) | [![version](https://img.shields.io/npm/v/@ion-phaser/core/latest.svg)](https://www.npmjs.com/package/@ion-phaser/core) | [`README.md`](./README.md)
 | **React** | [`@ion-phaser/react`](https://www.npmjs.com/package/@ion-phaser/react) | [![version](https://img.shields.io/npm/v/@ion-phaser/react/latest.svg)](https://www.npmjs.com/package/@ion-phaser/react) | [`README.md`](react/README.md)
 
-## Getting Started
-
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser/core@1.0.0/dist/ionphaser.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser/core@1.1.0/dist/ionphaser.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
