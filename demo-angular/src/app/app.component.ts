@@ -1,6 +1,15 @@
 import { Component } from '@angular/core';
 import * as Phaser from 'phaser';
 
+interface GameScene extends Phaser.Scene {
+  setAngle?: Function
+}
+
+interface GameInstance extends Phaser.Types.Core.GameConfig {
+  instance: Phaser.Game,
+  scene: GameScene | Phaser.Types.Scenes.CreateSceneFromObjectConfig
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +17,7 @@ import * as Phaser from 'phaser';
 })
 export class AppComponent {
   initialize = false;
-  game = {
+  game : GameInstance = {
     width: "100%",
     height: "100%",
     type: Phaser.AUTO,
@@ -29,16 +38,25 @@ export class AppComponent {
       },
       update: function() {
         this.helloWorld.angle += 1;
+      },
+      setAngle: function(newAngle) {
+        this.helloWorld.angle = newAngle
       }
     },
     instance: null
   }
 
+  getInstance() {
+    return this.game.instance
+  }
+
   initializeGame() {
     this.initialize = true
+  }
 
-    setTimeout(() => {
-      console.log(this.game.instance)
-    }, 3000)
+  changeAngle () {
+    const instance = this.getInstance()
+    const scene: any = instance.scene.getAt(0)
+    scene.helloWorld.angle = 0;
   }
 }

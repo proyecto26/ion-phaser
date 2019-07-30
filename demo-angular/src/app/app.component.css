@@ -113,3 +113,9 @@ a:focus:before {
     transform: rotate(360deg);
   }
 }
+
+.bottom-button {
+  position: absolute;
+  bottom: 50px;
+  color: white;
+}
