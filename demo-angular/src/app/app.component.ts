@@ -38,9 +38,6 @@ export class AppComponent {
       },
       update: function() {
         this.helloWorld.angle += 1;
-      },
-      setAngle: function(newAngle) {
-        this.helloWorld.angle = newAngle
       }
     },
     instance: null
