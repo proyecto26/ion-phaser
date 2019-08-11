@@ -1,6 +1,6 @@
 {
   "name": "@ion-phaser/react",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "React specific wrapper for @ion-phaser/core",
   "keywords": [
     "ionic",
@@ -28,9 +28,9 @@
     "tsc": "tsc -p .",
     "test": "jest"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist/"
   ],
