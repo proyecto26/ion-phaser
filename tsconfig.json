@@ -16,9 +16,15 @@
     "noUnusedParameters": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/phaser/types"
+    ],
+    "types": [
+      "Phaser"
+    ]
   },
-  "files": ["node_modules/phaser/types/phaser.d.ts"],
   "include": [
     "src",
     "types/jsx.d.ts"

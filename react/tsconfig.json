@@ -13,11 +13,19 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "dist",
+    "outDir": "dist-transpiled",
+    "declarationDir": "dist/types",
     "removeComments": false,
     "sourceMap": true,
     "jsx": "react",
-    "target": "es2015"
+    "target": "es2017",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/phaser/types"
+    ],
+    "types": [
+      "Phaser"
+    ]
   },
   "include": [
     "src/**/*.ts",
