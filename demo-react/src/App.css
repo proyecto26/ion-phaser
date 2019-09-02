@@ -35,6 +35,11 @@
   justify-content: center;
 }
 
+.destroyButton {
+  position: absolute;
+  bottom: 20px;
+}
+
 a.bttn {
   color: #FF0072;
   text-decoration: none;

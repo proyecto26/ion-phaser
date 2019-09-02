@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "phaser": "3.19.0",
     "@ion-phaser/core": "file:..",
     "core-js": "^2.6.5",
     "vue": "^2.6.10"

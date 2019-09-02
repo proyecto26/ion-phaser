@@ -13,17 +13,18 @@ interface Props {
   game?: Phaser.Game;
 }
 
-class IonPhaser extends React.Component<Props> {
-  ref = React.createRef();
+class IonPhaserComponent extends React.Component<Props> {
+  ref = React.createRef<Props>();
 
-  componentWillReceiveProps(nextProps: Props) {
-    const node = this.ref.current as Props
-    if (node.game !== nextProps.game) {
+  shouldComponentUpdate (nextProps: Props) {
+    const node = this.ref.current
+    if (!node.game && nextProps.game) {
       node.game = nextProps.game
-    }
+      return true
+    } return false
   }
 
-  public render(): React.ReactNode {
+  public render (): React.ReactNode {
     return (
       <ion-phaser
         ref={this.ref}
@@ -33,4 +34,4 @@ class IonPhaser extends React.Component<Props> {
   }
 };
 
-export default IonPhaser;
+export default IonPhaserComponent;

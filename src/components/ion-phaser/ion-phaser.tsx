@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, Element, Method } from '@stencil/core'
-import Phaser from 'phaser'
+import { Game } from 'phaser'
 import { GameInstance } from '../models'
 
 @Component({
@@ -31,7 +31,7 @@ export class IonPhaser {
    * Get the Phaser game instance
    */
   @Method()
-  async getInstance() {
+  async getInstance(): Promise<Game> {
     return this.getGameInstance()
   }
 
@@ -39,7 +39,7 @@ export class IonPhaser {
    * Destroy the Phaser game instance
    */
   @Method()
-  async destroy() {
+  async destroy(): Promise<void> {
     if (this.getGameInstance()) {
       this.game.instance.destroy(true)
       this.game.instance = null
@@ -57,7 +57,7 @@ export class IonPhaser {
     }
 
     this.game.parent = this.game.parent || this.el
-    this.game.instance = new Phaser.Game(this.game)
+    this.game.instance = new Game(this.game)
   }
 
   componentWillLoad() {

@@ -12,6 +12,7 @@ import './App.css'
 class App extends Component {
 
   state = {
+    unmounted: false,
     initialize: false,
     game: {
       width: "100%",
@@ -40,17 +41,15 @@ class App extends Component {
   }
 
   initializeGame = () => {
-    const { game } = this.state
-    // this.ionPhaser.game = game
     this.setState({ initialize: true })
+  }
 
-    setTimeout(() => {
-      console.log(game.instance)
-    }, 3000)
+  destroy = () => {
+    this.setState({ unmounted: true })
   }
 
   render() {
-    const { initialize, game } = this.state
+    const { initialize, game, unmounted } = this.state
     return (
       <div className="App">
         <header className="App-header">
@@ -62,7 +61,12 @@ class App extends Component {
               </div>
             </React.Fragment>
           }
-          <IonPhaser game={game} initialize={initialize} />
+          { !unmounted && <IonPhaser game={game} initialize={initialize} /> }
+          { initialize && !unmounted &&
+            <div onClick={this.destroy} className="flex destroyButton">
+              <a href="#1" className="bttn">Destroy</a>
+            </div>
+          }
         </header>
       </div>
     );

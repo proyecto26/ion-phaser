@@ -51,10 +51,6 @@ export default {
   methods: {
     initializeGame: function() {
       this.initialize = true
-      setTimeout(() => {
-        // eslint-disable-next-line
-        console.log(this.game.instance)
-      }, 3000)
     }
   },
 }

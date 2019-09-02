@@ -9,7 +9,9 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   GameInstance,
 } from './components/models';
-
+import {
+  Game,
+} from 'phaser';
 
 export namespace Components {
   interface IonPhaser {
@@ -24,7 +26,7 @@ export namespace Components {
     /**
     * Get the Phaser game instance
     */
-    'getInstance': () => Promise<Phaser.Game>;
+    'getInstance': () => Promise<Game>;
     /**
     * To initialize the plugin manually
     */
