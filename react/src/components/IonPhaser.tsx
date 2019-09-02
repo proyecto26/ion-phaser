@@ -16,12 +16,19 @@ interface Props {
 class IonPhaserComponent extends React.Component<Props> {
   ref = React.createRef<Props>();
 
-  shouldComponentUpdate (nextProps: Props) {
-    const node = this.ref.current
+  updateGame (nextProps: Props) {
+    const node = this.ref.current;
     if (!node.game && nextProps.game) {
-      node.game = nextProps.game
-      return true
-    } return false
+      node.game = nextProps.game;
+    }
+  }
+
+  componentDidMount () {
+    this.updateGame(this.props);
+  }
+
+  componentDidUpdate () {
+    this.updateGame(this.props);
   }
 
   public render (): React.ReactNode {
