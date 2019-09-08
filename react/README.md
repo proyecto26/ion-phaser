@@ -59,6 +59,7 @@ export default App;
 ## Supporting 🍻
 I believe in Unicorns 🦄
 Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
+[Professionally supported @ion-phaser/react is coming soon](https://tidelift.com/subscription/pkg/npm--ion-phaser-react?utm_source=npm--ion-phaser-react&utm_medium=referral&utm_campaign=readme)
 
 ## Happy coding 💯
 Made with ❤️
