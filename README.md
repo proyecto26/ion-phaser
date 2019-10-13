@@ -25,7 +25,7 @@ Web Component built with **[Stencil.js](https://github.com/ionic-team/stencil)**
 Do you want to see this web component in action? Visit https://codepen.io/jdnichollsc/full/oRrwKM yay! 🎉
 
 ## IonPhaser CE
-Looking for Phaser Framework CE (Community Edition)? Check [here](https://github.com/proyecto26/ion-phaser-ce)!
+Looking for [Phaser Framework CE (Community Edition)](https://github.com/photonstorm/phaser-ce)? Check [here](https://github.com/proyecto26/ion-phaser-ce)!
 
 ## Getting Started
 
