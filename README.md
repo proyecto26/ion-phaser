@@ -20,12 +20,12 @@ Web Component built with **[Stencil.js](https://github.com/ionic-team/stencil)**
 </p>
 <p align="center">Inspired by the old <a href="https://github.com/jdnichollsc/IonPhaser">IonPhaser directive</a></p>
 
-## IonPhaser CE
-Looking for Phaser Framework CE (Community Edition)? Check [here](https://github.com/proyecto26/ion-phaser-ce)!
-
 ## Demo
 
 Do you want to see this web component in action? Visit https://codepen.io/jdnichollsc/full/oRrwKM yay! 🎉
+
+## IonPhaser CE
+Looking for Phaser Framework CE (Community Edition)? Check [here](https://github.com/proyecto26/ion-phaser-ce)!
 
 ## Getting Started
 
