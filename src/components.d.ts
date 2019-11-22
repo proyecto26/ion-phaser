@@ -48,7 +48,7 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface IonPhaser extends JSXBase.HTMLAttributes<HTMLIonPhaserElement> {
+  interface IonPhaser {
     /**
     * The configuration of the game
     */
@@ -69,7 +69,9 @@ export { LocalJSX as JSX };
 
 declare module "@stencil/core" {
   export namespace JSX {
-    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+    interface IntrinsicElements {
+      'ion-phaser': LocalJSX.IonPhaser & JSXBase.HTMLAttributes<HTMLIonPhaserElement>;
+    }
   }
 }
 

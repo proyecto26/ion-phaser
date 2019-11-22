@@ -1,7 +1,7 @@
 import React from 'react';
 import Phaser from 'phaser';
 
-declare module "react" {
+declare global {
   namespace JSX {
     interface IntrinsicElements {
       'ion-phaser': any

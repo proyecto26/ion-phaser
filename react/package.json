@@ -1,6 +1,6 @@
 {
   "name": "@ion-phaser/react",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "React specific wrapper for @ion-phaser/core",
   "keywords": [
     "ionic",
