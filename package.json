@@ -1,16 +1,21 @@
 {
   "name": "@ion-phaser/core",
-  "version": "1.2.0",
+  "version": "1.2.1",
+  "private": false,
   "description": "A web component to integrate Phaser Framework with Angular, React, Vue, etc",
   "keywords": [
-    "ionic",
     "phaser",
+    "canvas",
+    "webgl",
+    "pwa",
     "framework",
     "angular",
     "react",
     "vue",
     "app",
     "vanillajs",
+    "stencil",
+    "stenciljs",
     "webcomponent",
     "web component",
     "web components"
@@ -31,24 +36,19 @@
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
   "peerDependencies": {
     "phaser": "^3.19.0"
   },
   "devDependencies": {
     "phaser": "^3.19.0",
-    "@stencil/core": "~1.5.3",
-    "@types/jest": "24.0.18",
-    "@types/puppeteer": "1.19.1",
-    "jest": "24.9.0",
-    "jest-cli": "24.9.0",
-    "puppeteer": "1.19.0"
+    "@stencil/core": "^1.8.1"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/proyecto26/ion-phaser.git"
-  },
-  "private": false
+  }
 }

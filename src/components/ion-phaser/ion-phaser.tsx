@@ -4,6 +4,7 @@ import { GameInstance } from '../models'
 
 @Component({
   tag: 'ion-phaser',
+  styleUrl: 'ion-phaser.css',
   shadow: false
 })
 export class IonPhaser {
@@ -12,8 +13,15 @@ export class IonPhaser {
    */
   @Prop({
     mutable: true,
-    reflectToAttr: true
+    reflect: true
   }) game: GameInstance
+
+  @Watch('game')
+  onGameChange(game: GameInstance) {
+    if (this.initialize && !this.getGameInstance()) {
+      this.initializeGame(game)
+    }
+  }
 
   /**
    * To initialize the plugin manually
@@ -32,7 +40,7 @@ export class IonPhaser {
    */
   @Method()
   async getInstance(): Promise<Game> {
-    return this.getGameInstance()
+    return Promise.resolve(this.getGameInstance())
   }
 
   /**
@@ -48,16 +56,14 @@ export class IonPhaser {
 
   @Element() el: HTMLElement
 
-  initializeGame = () => {
-    if(!this.game){
-      throw new Error("The configuration of the game is required")
-    }
-    if(this.game.instance){
+  initializeGame = (game = this.game) => {
+    if(!game) return
+    if(game.instance){
       throw new Error("A Phaser game already exist")
     }
 
-    this.game.parent = this.game.parent || this.el
-    this.game.instance = new Game(this.game)
+    game.parent = game.parent || this.el
+    game.instance = new Game(game)
   }
 
   componentWillLoad() {
