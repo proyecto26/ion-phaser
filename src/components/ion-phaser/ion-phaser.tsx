@@ -63,7 +63,7 @@ export class IonPhaser {
     }
 
     game.parent = game.parent || this.el
-    game.instance = new Game(game)
+    game.instance = new Phaser.Game(game)
   }
 
   componentWillLoad() {

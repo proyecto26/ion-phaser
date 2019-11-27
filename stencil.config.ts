@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'ionphaser',
+  globalScript: 'src/global/global.ts',
   commonjs: {
     namedExports: {
       'phaser': ['Game', 'Types']
