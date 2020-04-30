@@ -6,7 +6,7 @@ import logo from './assets/logo.png'
 import './App.css'
 
 class MainScene extends Phaser.Scene {
-  private helloWorld: Phaser.GameObjects.Text
+  private helloWorld!: Phaser.GameObjects.Text
 
   init () {
     this.cameras.main.setBackgroundColor('#24252A')
