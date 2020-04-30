@@ -1,9 +1,5 @@
-/**
- * @flow
- */
-
 import React, { useState } from 'react'
-import Phaser, {  } from 'phaser'
+import Phaser from 'phaser'
 import { IonPhaser } from '@ion-phaser/react'
 import logo from './assets/logo.png'
 
