@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property     | Attribute    | Description                       | Type           | Default     |
-| ------------ | ------------ | --------------------------------- | -------------- | ----------- |
-| `game`       | --           | The configuration of the game     | `GameInstance` | `undefined` |
-| `initialize` | `initialize` | To initialize the plugin manually | `boolean`      | `true`      |
+| Property     | Attribute    | Description                         | Type           | Default     |
+| ------------ | ------------ | ----------------------------------- | -------------- | ----------- |
+| `game`       | --           | Set the configuration of the game   | `GameInstance` | `undefined` |
+| `initialize` | `initialize` | Initialize the phaser game manually | `boolean`      | `true`      |
 
 
 ## Methods

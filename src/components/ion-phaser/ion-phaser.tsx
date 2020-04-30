@@ -8,29 +8,31 @@ import { GameInstance } from '../models'
   shadow: false
 })
 export class IonPhaser {
+  @Element() el!: HTMLIonPhaserElement
+
   /**
-   * The configuration of the game
+   * Set the configuration of the game
    */
   @Prop({
     mutable: true,
     reflect: true
-  }) game: GameInstance
+  }) game?: GameInstance
 
   @Watch('game')
   onGameChange(game: GameInstance) {
-    if (this.initialize && !this.getGameInstance()) {
+    if (this.initialize && !this.hasInitialized()) {
       this.initializeGame(game)
     }
   }
 
   /**
-   * To initialize the plugin manually
+   * Initialize the phaser game manually
    */
-  @Prop() initialize: boolean = true
+  @Prop() initialize?: boolean = true
 
   @Watch('initialize')
-  onInitialize(initialize: boolean) {
-    if (initialize && !this.getGameInstance()) {
+  onInitialize(newInitialize: boolean, oldInitialize: boolean) {
+    if (newInitialize && !oldInitialize) {
       this.initializeGame()
     }
   }
@@ -40,7 +42,8 @@ export class IonPhaser {
    */
   @Method()
   async getInstance(): Promise<Game> {
-    return Promise.resolve(this.getGameInstance())
+    const { instance } = this.game || {}
+    return Promise.resolve(instance)
   }
 
   /**
@@ -48,26 +51,14 @@ export class IonPhaser {
    */
   @Method()
   async destroy(): Promise<void> {
-    if (this.getGameInstance()) {
+    if (this.hasInitialized()) {
       this.game.instance.destroy(true)
       this.game.instance = null
     }
   }
 
-  @Element() el: HTMLElement
-
-  initializeGame = (game = this.game) => {
-    if(!game) return
-    if(game.instance){
-      throw new Error("A Phaser game already exist")
-    }
-
-    game.parent = game.parent || this.el
-    game.instance = new Phaser.Game(game)
-  }
-
   componentWillLoad() {
-    if (!this.getGameInstance() && this.initialize) {
+    if (!this.hasInitialized() && this.initialize) {
       this.initializeGame()
     }
   }
@@ -76,7 +67,21 @@ export class IonPhaser {
     this.destroy()
   }
 
-  getGameInstance() {
-    return this.game && this.game.instance
+  private hasInitialized(): boolean {
+    return (
+      this.game &&
+      this.game.instance !== undefined &&
+      this.game.instance !== null
+    )
+  }
+
+  private initializeGame = (game = this.game) => {
+    if(game === null || game === undefined) return
+    if(game.instance !== undefined && game.instance !== null) {
+      throw new Error("A Phaser game already exist")
+    }
+
+    game.parent = game.parent || this.el
+    game.instance = new Game(game)
   }
 }

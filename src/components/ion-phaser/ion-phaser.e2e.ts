@@ -1,5 +1,4 @@
 import { newE2EPage } from '@stencil/core/testing';
-import Phaser from 'phaser';
 
 describe('ion-phaser', () => {
   it('renders', async () => {

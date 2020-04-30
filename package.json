@@ -1,24 +1,40 @@
 {
   "name": "@ion-phaser/core",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": false,
   "description": "A web component to integrate Phaser Framework with Angular, React, Vue, etc",
+  "author": "Proyecto 26",
+  "homepage": "https://github.com/proyecto26/ion-phaser",
   "keywords": [
     "phaser",
     "canvas",
     "webgl",
     "pwa",
     "framework",
+    "stenciljs",
+    "stencil",
     "angular",
+    "angularjs",
     "react",
     "vue",
+    "vuejs",
     "app",
     "vanillajs",
-    "stencil",
-    "stenciljs",
     "webcomponent",
+    "component",
+    "web-component",
+    "web-components",
     "web component",
-    "web components"
+    "web components",
+    "progressive-web-app",
+    "progressive-web-apps",
+    "progressive web app",
+    "progressive web apps",
+    "mobile",
+    "desktop",
+    "electron",
+    "games",
+    "2d"
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -37,14 +53,21 @@
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "generate": "stencil generate",
+    "lint": "eslint src/**/*{.ts,.tsx}"
   },
   "peerDependencies": {
     "phaser": "^3.19.0"
   },
   "devDependencies": {
-    "phaser": "^3.19.0",
-    "@stencil/core": "^1.8.1"
+    "@stencil/core": "^1.12.7",
+    "@stencil/eslint-plugin": "^0.3.1",
+    "@stencil/react-output-target": "^0.0.6",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "phaser": "^3.19.0"
   },
   "license": "MIT",
   "repository": {
