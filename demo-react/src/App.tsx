@@ -59,8 +59,8 @@ export default function App () {
 
   const destroy = () => {
     console.log('Instance', game?.instance)
-    game?.instance?.destroy(true)
     setInitialize(false)
+    setGame(undefined)
   }
 
   useEffect(() => {
