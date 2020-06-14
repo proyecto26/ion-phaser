@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Phaser from 'phaser'
-import { IonPhaser } from '@ion-phaser/react'
+import { IonPhaser, GameInstance } from '@ion-phaser/react'
 import logo from './assets/logo.png'
 
 import './App.css'
@@ -28,7 +28,7 @@ class MainScene extends Phaser.Scene {
   }
 }
 
-const game: Phaser.Types.Core.GameConfig = {
+const gameConfig: GameInstance = {
   width: "100%",
   height: "100%",
   type: Phaser.AUTO,
@@ -53,10 +53,21 @@ const game: Phaser.Types.Core.GameConfig = {
   scene: MainScene
 };
 
-const destroy = () => window.location.reload()
-
 export default function App () {
+  const [game, setGame] = useState<GameInstance>()
   const [initialize, setInitialize] = useState(false)
+
+  const destroy = () => {
+    console.log('Instance', game?.instance)
+    game?.instance?.destroy(true)
+    setInitialize(false)
+  }
+
+  useEffect(() => {
+    if (initialize) {
+      setGame(Object.assign({}, gameConfig))
+    }
+  }, [initialize])
 
   return (
     <div className="App">
