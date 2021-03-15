@@ -10,8 +10,8 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "phaser": "3.19.0",
-    "@ion-phaser/core": "file:.."
+    "phaser": "3.53.1",
+    "@ion-phaser/core": "^1.3.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",

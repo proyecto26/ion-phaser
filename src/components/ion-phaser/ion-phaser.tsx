@@ -1,6 +1,7 @@
 import { Component, Prop, Watch, Element, Method } from '@stencil/core'
-import { Game } from 'phaser'
-import { GameInstance } from '../models'
+import { GameInstance } from '../models/game'
+
+declare const Phaser: any
 
 @Component({
   tag: 'ion-phaser',
@@ -41,7 +42,7 @@ export class IonPhaser {
    * Get the Phaser game instance
    */
   @Method()
-  async getInstance(): Promise<Game> {
+  async getInstance(): Promise<GameInstance['instance']> {
     const { instance } = this.game || {}
     return Promise.resolve(instance)
   }
@@ -57,13 +58,13 @@ export class IonPhaser {
     }
   }
 
-  componentWillLoad() {
+  connectedCallback() {
     if (!this.hasInitialized() && this.initialize) {
       this.initializeGame()
     }
   }
 
-  componentDidUnload() {
+  disconnectedCallback() {
     this.destroy()
   }
 
@@ -82,6 +83,6 @@ export class IonPhaser {
     }
 
     game.parent = game.parent || this.el
-    game.instance = new Game(game)
+    game.instance = new Phaser.Game(game)
   }
 }

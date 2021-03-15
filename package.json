@@ -1,6 +1,6 @@
 {
   "name": "@ion-phaser/core",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "private": false,
   "description": "A web component to integrate Phaser Framework with Angular, React, Vue, etc",
   "author": "Proyecto 26",
@@ -36,37 +36,39 @@
     "games",
     "2d"
   ],
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
-  "types": "dist/types/components.d.ts",
-  "unpkg": "dist/ionphaser/ionphaser.js",
-  "collection:main": "dist/collection/index.js",
+  "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/ionphaser/ionphaser.esm.js",
   "files": [
     "dist/",
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
+    "build": "stencil build --docs --config stencil.config.prod.ts",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "lint": "eslint src/**/*{.ts,.tsx}"
   },
+  "dependencies": {
+    "@stencil/core": "^2.4.0"
+  },
   "peerDependencies": {
     "phaser": "^3.19.0"
   },
   "devDependencies": {
-    "@stencil/core": "^1.12.7",
     "@stencil/eslint-plugin": "^0.3.1",
-    "@stencil/react-output-target": "^0.0.6",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
-    "@typescript-eslint/parser": "^2.30.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.19.0",
+    "@stencil/react-output-target": "^0.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "eslint-plugin-react": "^7.22.0",
     "phaser": "^3.19.0"
   },
   "license": "MIT",

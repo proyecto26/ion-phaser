@@ -112,13 +112,13 @@
 
 </head>
 <body>
-  <ion-phaser initialize="false"></ion-phaser>
+  <ion-phaser initialize="false" style="display: none;"></ion-phaser>
   <div id="init" class="flex">
     <a href="#0" class="bttn">Initialize</a>
   </div>
   <script>
     const ionPhaser = document.querySelector('ion-phaser');
-    const initButton = document.getElementsByClassName('bttn')[0];
+    const initButton = document.getElementById('init');
 
     const game = {
       width: "100%",
@@ -146,9 +146,11 @@
     }
 
     initButton.addEventListener("click", function (){
+      initButton.style.display = 'none';
+
+      ionPhaser.style.removeProperty('display');
       ionPhaser.game = game;
       ionPhaser.initialize = true;
-
       ionPhaser.getInstance()
         .then((i) => console.log(i))
         .catch((error) => console.error(error))

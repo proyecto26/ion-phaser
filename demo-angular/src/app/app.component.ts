@@ -19,7 +19,7 @@ class CommonScene extends Phaser.Scene {
       this.cameras.main.centerY, 
       "Hello World", { 
         font: "40px Arial", 
-        fill: "#ffffff" 
+        color: "#ffffff" 
       }
     );
     this.helloWorld.setOrigin(0.5);

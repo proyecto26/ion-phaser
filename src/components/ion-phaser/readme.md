@@ -25,7 +25,7 @@ Type: `Promise<void>`
 
 
 
-### `getInstance() => Promise<Game>`
+### `getInstance() => Promise<GameInstance['instance']>`
 
 Get the Phaser game instance
 
