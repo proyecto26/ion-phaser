@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Phaser from 'phaser'
 import { IonPhaser, GameInstance } from '@ion-phaser/react'
 import logo from './assets/logo.png'
@@ -18,7 +18,7 @@ class MainScene extends Phaser.Scene {
       this.cameras.main.centerY, 
       "Hello World", { 
         font: "40px Arial", 
-        fill: "#ffffff" 
+        color: "#ffffff" 
       }
     );
     this.helloWorld.setOrigin(0.5);
@@ -54,11 +54,12 @@ const gameConfig: GameInstance = {
 };
 
 export default function App () {
+  const gameRef = useRef<HTMLIonPhaserElement>()
   const [game, setGame] = useState<GameInstance>()
   const [initialize, setInitialize] = useState(false)
 
   const destroy = () => {
-    console.log('Instance', game?.instance)
+    gameRef.current?.destroy()
     setInitialize(false)
     setGame(undefined)
   }
@@ -74,7 +75,7 @@ export default function App () {
       <header className="App-header">
         { initialize ? (
           <>
-            <IonPhaser game={game} initialize={initialize} />
+            <IonPhaser ref={gameRef} game={game} initialize={initialize} />
             <div onClick={destroy} className="flex destroyButton">
               <a href="#1" className="bttn">Destroy</a>
             </div>
