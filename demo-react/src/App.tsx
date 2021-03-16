@@ -54,7 +54,7 @@ const gameConfig: GameInstance = {
 };
 
 export default function App () {
-  const gameRef = useRef<HTMLIonPhaserElement>()
+  const gameRef = useRef<HTMLIonPhaserElement>(null)
   const [game, setGame] = useState<GameInstance>()
   const [initialize, setInitialize] = useState(false)
 
