@@ -45,12 +45,12 @@ Simply add this tag wherever you want in your project:
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser/core@1.3.0/dist/ionphaser.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://cdn.jsdelivr.net/npm/@ion-phaser/core@1.3.0/dist/ionphaser/ionphaser.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
 - Run `npm install @ion-phaser/core --save`
-- Put a script tag similar to this `<script src='node_modules/@ion-phaser/core/dist/ionphaser.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='node_modules/@ion-phaser/core/dist/ionphaser/ionphaser.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### In a stencil-starter app
