@@ -53,6 +53,16 @@ export class IonPhaser {
   @Method()
   async destroy(): Promise<void> {
     if (this.hasInitialized()) {
+      // Remove registered global plugins before destroying to avoid stale references
+      const pluginManager = this.game.instance.plugins
+      if (pluginManager) {
+        const globalPlugins = pluginManager.plugins?.slice() || []
+        for (const entry of globalPlugins) {
+          if (entry.key) {
+            pluginManager.removeGlobalPlugin(entry.key)
+          }
+        }
+      }
       this.game.instance.destroy(true)
       this.game.instance = null
     }
