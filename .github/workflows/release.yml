@@ -181,8 +181,8 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies (including devDependencies for Phaser types)
+        run: npm install --include=dev
 
       - name: Build Stencil component
         run: npm run build
