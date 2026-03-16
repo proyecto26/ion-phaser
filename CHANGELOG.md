@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-03-16
+### Added
+- upgrade Stencil v4, React 17/18 support, release automation ([95b75e6](https://github.com/proyecto26/ion-phaser/commit/95b75e68080be3136d58fb13407da465bc319f1f)).
+
+### Changed
+- Update README.md ([2abd545](https://github.com/proyecto26/ion-phaser/commit/2abd54559f234f91b5c9e6196a99e88076576a8d)).
+- Update README.md ([838131f](https://github.com/proyecto26/ion-phaser/commit/838131f7b3a5b1467114d01260113c94a43d295d)).
+- Update README.md ([1c3ec36](https://github.com/proyecto26/ion-phaser/commit/1c3ec367db157ad5b542dd66618219116c9a4909)).
+- Update FUNDING.yml ([dbe24b1](https://github.com/proyecto26/ion-phaser/commit/dbe24b15208345bf9f4926765114c2f645fee6cc)).
+- Update README.md ([42be2a6](https://github.com/proyecto26/ion-phaser/commit/42be2a6cc290853566e0cb83c2368cffff014145)).
+- Update README.md ([8a0d9a9](https://github.com/proyecto26/ion-phaser/commit/8a0d9a94dfc912632b27f7cc379f3e659b8cb81d)).
+- Fix scripts to be used from HTML ([8d54af2](https://github.com/proyecto26/ion-phaser/commit/8d54af21803fe1d47059e9fbcfcc7279cc4501e7)).
+- Update README.md ([bb3f9b1](https://github.com/proyecto26/ion-phaser/commit/bb3f9b10947159b91b8bcd9fd379800f33e90629)).
+
+
+
+
 ### Added
 - Upgrade `@stencil/core` to v4 (from v2.4).
 - Upgrade `@stencil/react-output-target` to v0.7.
@@ -56,7 +73,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add demo including the component for Angular, React and Vue.js.
 - Add codepen example to see the component in action using Vue.js.
 
-[Unreleased]: https://github.com/proyecto26/ion-phaser/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/proyecto26/ion-phaser/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/proyecto26/ion-phaser/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/proyecto26/ion-phaser/compare/v1.2.3...v1.3.0
 [1.2.3]: https://github.com/proyecto26/ion-phaser/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/proyecto26/ion-phaser/compare/v1.2.1...v1.2.2
