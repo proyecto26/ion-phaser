@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.1] - 2026-03-16
+### Changed
+- v1.5.0 ([fd02b2a](https://github.com/proyecto26/ion-phaser/commit/fd02b2a94434a69e2258d3ca6db60d9433d8392e)).
+
+### Fixed
+- remove deprecated Stencil v2 React wrapper files ([546747f](https://github.com/proyecto26/ion-phaser/commit/546747f32c3c273783f2f929a670f4ef7af2f45f)).
+- remove Phaser typeRoots/types from tsconfig for CI compatibility ([eda7a05](https://github.com/proyecto26/ion-phaser/commit/eda7a051c6864a80df0615a9e8a91c84f4829457)).
+
+
+
+
 ## [1.5.0] - 2026-03-16
 ### Changed
 - v1.4.0 ([76f1fed](https://github.com/proyecto26/ion-phaser/commit/76f1fedc9f7037b62d4297504c2a5d8ba9043e54)).
@@ -84,7 +95,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add demo including the component for Angular, React and Vue.js.
 - Add codepen example to see the component in action using Vue.js.
 
-[Unreleased]: https://github.com/proyecto26/ion-phaser/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/proyecto26/ion-phaser/compare/v1.5.1...HEAD
+[1.5.1]: https://github.com/proyecto26/ion-phaser/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/proyecto26/ion-phaser/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/proyecto26/ion-phaser/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/proyecto26/ion-phaser/compare/v1.2.3...v1.3.0
