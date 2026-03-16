@@ -30,6 +30,8 @@
     "types/jsx.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "src/**/*.e2e.ts",
+    "src/**/*.spec.ts"
   ]
 }

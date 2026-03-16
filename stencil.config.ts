@@ -5,17 +5,15 @@ export const config: Config = {
   namespace: 'ionphaser',
   outputTargets: [
     reactOutputTarget({
-      componentCorePackage: '@ion-phaser/core',
-      proxiesFile: './react/src/components.ts',
-      includeDefineCustomElements: true,
-      includePolyfills: true
+      outDir: './react/src/components',
     }),
     {
       type: 'dist',
       esmLoaderPath: '../loader'
     },
     {
-      type: 'dist-custom-elements-bundle',
+      type: 'dist-custom-elements',
+      externalRuntime: false,
     },
     {
       type: 'docs-readme'

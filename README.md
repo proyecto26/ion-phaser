@@ -24,8 +24,17 @@ Web Component built with **[Stencil.js](https://github.com/ionic-team/stencil)**
 
 Do you want to see this web component in action? Visit https://codepen.io/jdnichollsc/full/oRrwKM yay! 🎉
 
+- Web Camera: https://codepen.io/jdnichollsc/full/YzQWEwz
+
 ## IonPhaser CE
 Looking for [Phaser Framework CE (Community Edition)](https://github.com/photonstorm/phaser-ce)? Check [here](https://github.com/proyecto26/ion-phaser-ce)!
+
+## Usage
+Simply add this tag wherever you want in your project:
+- [ion-phaser](./src/components/ion-phaser/readme.md)
+```html
+<ion-phaser [game]="game"></ion-phaser>
+```
 
 ## Getting Started
 
@@ -38,28 +47,18 @@ Looking for [Phaser Framework CE (Community Edition)](https://github.com/photons
 
 ### Script tag
 
-- Put a script tag similar to this `<script src='https://unpkg.com/@ion-phaser/core@1.3.0/dist/ionphaser.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='https://cdn.jsdelivr.net/npm/@ion-phaser/core@1.3.0/dist/ionphaser/ionphaser.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### Node Modules
 - Run `npm install @ion-phaser/core --save`
-- Put a script tag similar to this `<script src='node_modules/@ion-phaser/core/dist/ionphaser.js'></script>` in the head of your index.html
+- Put a script tag similar to this `<script src='node_modules/@ion-phaser/core/dist/ionphaser/ionphaser.esm.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### In a stencil-starter app
 - Run `npm install @ion-phaser/core --save`
 - Add an import to the npm packages `import @ion-phaser/core;`
 - Then you can use the element anywhere in your template, JSX, html etc
-
-## Usage
-Simply add this tag wherever you want in your project:
-```html
-<ion-phaser [game]="game"></ion-phaser>
-```
-
-These properties are available on the component:
-- [_game_](#configuration) (**required**)
-- **initialize** (optional)
 
 # Framework integrations
 
@@ -300,6 +299,12 @@ You can learn more about how you can contribute to this project in the [contribu
 ## Supporting 🍻
 I believe in Unicorns 🦄
 Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
+
+Donate **Ethereum**, **ADA**, **BNB**, **SHIBA**, **USDT/USDC**, **DOGE**, etc:
+
+> Wallet address: jdnichollsc.eth
+
+Please let us know your contributions! 🙏
 
 ## Enterprise 💼
 
