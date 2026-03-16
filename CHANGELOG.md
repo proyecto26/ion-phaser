@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.2] - 2026-03-16
+### Fixed
+- upgrade demo-react to React 18 + Vite, fix React wrapper for Stencil v4 ([0bd9da2](https://github.com/proyecto26/ion-phaser/commit/0bd9da281f94fe37ff4593b8185dc10374a26115)).
+
+
+
+
 ## [1.5.1] - 2026-03-16
 ### Changed
 - v1.5.0 ([fd02b2a](https://github.com/proyecto26/ion-phaser/commit/fd02b2a94434a69e2258d3ca6db60d9433d8392e)).
@@ -95,7 +102,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add demo including the component for Angular, React and Vue.js.
 - Add codepen example to see the component in action using Vue.js.
 
-[Unreleased]: https://github.com/proyecto26/ion-phaser/compare/v1.5.1...HEAD
+[Unreleased]: https://github.com/proyecto26/ion-phaser/compare/v1.5.2...HEAD
+[1.5.2]: https://github.com/proyecto26/ion-phaser/compare/v1.5.1...v1.5.2
 [1.5.1]: https://github.com/proyecto26/ion-phaser/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/proyecto26/ion-phaser/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/proyecto26/ion-phaser/compare/v1.3.0...v1.4.0
