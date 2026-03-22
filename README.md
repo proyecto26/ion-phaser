@@ -291,20 +291,24 @@ export default {
 
 [_from stencil documentation_](https://github.com/ionic-team/stencil-site/blob/master/src/docs/framework-integration/vue.md)
 
-## Contributing ✨
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.  
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated** ❤️.  
-You can learn more about how you can contribute to this project in the [contribution guide](https://github.com/proyecto26/ion-phaser/blob/develop/CONTRIBUTING.md).
+## Star History 🌟
 
-## Supporting 🍻
-I believe in Unicorns 🦄
-Support [me](http://www.paypal.me/jdnichollsc/2), if you do too.
+[![Star History Chart](https://api.star-history.com/svg?repos=proyecto26/ion-phaser&type=Date)](https://star-history.com/#proyecto26/ion-phaser-code&Date)
 
-Donate **Ethereum**, **ADA**, **BNB**, **SHIBA**, **USDT/USDC**, **DOGE**, etc:
+## Sponsors 💜
 
-> Wallet address: jdnichollsc.eth
+This project is free and open source. Sponsors help keep it maintained and growing.
 
-Please let us know your contributions! 🙏
+[**Become a Sponsor**](https://github.com/sponsors/proyecto26) | [Sponsorship Program](https://proyecto26.com/sponsors/)
+
+## Contribution 🤝
+
+When contributing to this repository, please first discuss the change you wish to make via issue,
+email, or any other method with the owners of this repository before making a change.
+ 
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated** ❤️.
+ 
+You can learn more about how you can contribute to this project in the [contribution guide](https://github.com/proyecto26/ion-phaser-ce/blob/develop/CONTRIBUTING.md).
 
 ## Enterprise 💼
 
